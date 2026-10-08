@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body.classList.remove("shake-effect");
             body.style.background = "#050505";
             if (finalText) finalText.style.display = "block";
-        }, 1200);
+        }, 7000);
 
     }, randomDelay);
 });
