@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 15th — Protocol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="glitch-container">
+        <header>
+            <h1 class="flicker">SYSTEM_INIT_v1.5</h1>
+            <p class="subtitle">Amati sekeliling. Tidak semua yang tampak itu nyata.</p>
+        </header>
+
+        <main class="grid-buttons">
+            <!-- 15 Tombol (Fake & Real Interaction) -->
+            <button class="fake-btn">START_01</button>
+            <button class="fake-btn">CONNECT</button>
+            <button class="fake-btn">OVERRIDE</button>
+            <button class="fake-btn">NULL_POINTER</button>
+            <button class="fake-btn">RUN_DIAG</button>
+            <button class="fake-btn">SECURE_PORT</button>
+            <button class="fake-btn">TERMINATE</button>
+            <button class="fake-btn">BYPASS</button>
+            
+            <!-- Gambar Rahasia yang Benar (Tersembunyi di antara dekorasi) -->
+            <div class="secret-image-wrapper" id="secret-trigger" title="...">
+                <img src="assets/images/placeholder.png" alt="[DATA_CORRUPT]" class="secret-img">
+            </div>
+
+            <button class="fake-btn">FLUSH_CACHE</button>
+            <button class="fake-btn">REBOOT</button>
+            <button class="fake-btn">FETCH_LOG</button>
+            <button class="fake-btn">SYNC_TIME</button>
+            <button class="fake-btn">DUMP_CORE</button>
+            <button class="fake-btn">EXIT_SAFE</button>
+        </main>
+
+        <div id="status-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

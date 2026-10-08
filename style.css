@@ -1,0 +1,46 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: #080808;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.noise-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%\" height="100%\" filter="url(%23noiseFilter)" opacity="0.04"/></svg>');
+    pointer-events: none; z-index: 999;
+}
+.glitch-container {
+    width: 90%; max-width: 800px; padding: 30px; text-align: center;
+    border: 1px solid #222; background: rgba(12, 12, 12, 0.95);
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+h1 { font-size: 1.8rem; margin-bottom: 10px; color: #fff; letter-spacing: 2px; }
+.subtitle { font-size: 0.9rem; color: #777; margin-bottom: 30px; }
+.grid-buttons {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px; justify-items: center; align-items: center; margin-bottom: 20px;
+}
+.fake-btn {
+    background: #111; color: #888; border: 1px solid #333; padding: 10px 15px;
+    font-family: inherit; font-size: 0.8rem; cursor: pointer; width: 100%;
+    transition: all 0.2s ease;
+}
+.fake-btn:hover { background: #1a1a1a; color: #aaa; border-color: #555; }
+.secret-image-wrapper {
+    width: 100%; height: 45px; display: flex; justify-content: center; align-items: center;
+    cursor: pointer; opacity: 0.15; filter: grayscale(100%); transition: all 0.5s ease;
+    border: 1px dashed #222;
+}
+.secret-image-wrapper:hover { opacity: 0.8; filter: grayscale(0%); border-color: #ff3333; }
+.secret-img { max-height: 35px; object-fit: contain; }
+#status-message { min-height: 30px; font-size: 0.85rem; color: #ff3333; margin-top: 15px; }
+.flicker { animation: textFlicker 3s infinite; }
+@keyframes textFlicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 0.99; }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
+}

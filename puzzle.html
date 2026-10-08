@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 15th — Puzzle Utama</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="container" id="puzzle-box">
+        <h2>SECURE_KEY_ENTRY</h2>
+        <p class="instruction">Masukkan kode akses utama berdasarkan pesan sebelumnya:</p>
+        
+        <div class="hint-container">
+            <span class="hint-toggle" id="show-hint">[*] Tampilkan Hint</span>
+            <div id="hint-text" style="display:none; color: #777; font-size: 0.8rem; margin-top: 8px;"></div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="code-input" placeholder="KODE..." autofocus autocomplete="off" />
+            <button class="horror-btn" id="submit-code">ENTER</button>
+        </div>
+        <div id="msg"></div>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>
